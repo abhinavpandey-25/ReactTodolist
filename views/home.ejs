@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Document</title>
+</head>
+<!-- u can use the navbar by including in the following way using ejs -->
+<%-include('partials/nav.ejs');%>
+
+<body>
+    <h1 style="text-align: center;">Here Is The TaskList</h1>
+    <div class="outer">
+    <form id="myForm">
+        <input type="text " placeholder=" add your task here "id="item">
+        <div>
+        <button id="submit" style="margin-top: 20px;" class="waves-effect waves-light btn">ADD</button>
+        </div>
+    </form>
+</div>
+    <div id="temp">
+        <ul>
+            <%   arr.forEach(item=>{%>
+            <div class="mydiv" onclick=deleteitem(this)><%=item.wish%></div>
+            <%})%>
+        </ul>
+    </div>
+</body>
+<script src="/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+</html>

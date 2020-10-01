@@ -1,0 +1,17 @@
+body{
+    background-color: yellow;
+}
+.outer{
+    text-align: center;
+    
+}
+.mydiv{
+    background-color: yellowgreen;
+    margin: 10px 10px;
+   text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+}
+.mydiv:hover{
+    text-decoration: line-through;
+}
