@@ -1,6 +1,6 @@
 function deleteitem(item){
     console.log(item);
-    fetch('http://localhost:3030/removedata/'+item.innerText,{
+    fetch('/removedata/'+item.innerText,{
         method:"delete"
     }).then(promise=>promise.json()).then(d=>{
     console.log(d);
@@ -14,7 +14,7 @@ function deleteitem(item){
        var obj={
              item:item  
        }
-       const url = 'http://localhost:3030/sent'
+       const url = '/sent'
        fetch(url, {
            method: "post",
            body: JSON.stringify(obj),
