@@ -1,3 +1,8 @@
-module.exports={
-    mongourl:"mongodb+srv://abhinav:Pandey@cluster0.32tsc.mongodb.net/Testing?retryWrites=true&w=majority"
+const e = require('express');
+
+if(process.env.NODE_ENV=="production"){
+    module.exports=require("./prod");
+}
+else{
+    module.exports=require("./dev");
 }
