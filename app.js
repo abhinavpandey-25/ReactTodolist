@@ -6,10 +6,11 @@ const routes=require('./routes');
 const mongoose=require('mongoose');
 const {mongourl}=require('./config/keys');
 mongoose.connect(mongourl,{ useNewUrlParser: true , useUnifiedTopology: true } );
-require('./models/wish');
+require('./models/wish');   
 //public will serve the static files
-//app.use(express.static('public'));
-//app.set('view engine','ejs');kyuki ab templating engine use nahi karna react use kr rahe
+//app.use(express.static(__dirname+'/public'));
+//app.set('view engine','ejs');
+//kyuki ab templating engine use nahi karna react use kr rahe
 //the above two are middlewares that help in the execution of the other functions
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
@@ -23,7 +24,6 @@ if(process.env.NODE_ENV=="production"){
     });
 }
 app.listen(port,()=>console.log("server started"));
-
 // const http=require('http');
 // http.createServer((req,resp)=>{
 //     resp.write("Helll");
